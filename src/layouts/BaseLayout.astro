@@ -5,6 +5,7 @@ import "../scripts/script.js";
 
 const { title = "Bella Vista Restaurant" } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -19,10 +20,33 @@ const base = import.meta.env.BASE_URL;
             <nav class="container">
                 <a href={base} class="logo">Bella Vista</a>
                 <ul class="nav-links">
-                    <li><a href={base}>Home</a></li>
-                    <li><a href={base + "about"}>About</a></li>
-                    <li><a href={base + "menu"}>Menu</a></li>
-                    <li><a href={base + "contact"}>Contact</a></li>
+                    <li>
+                    <a
+                        href={base}
+                        class={currentPath === base ? "active" : ""}
+                    >Home</a>
+                    </li>
+
+                    <li>
+                    <a
+                        href={base + "about"}
+                        class={currentPath === base + "about" ? "active" : ""}
+                    >About</a>
+                    </li>
+
+                    <li>
+                    <a
+                        href={base + "menu"}
+                        class={currentPath === base + "menu" ? "active" : ""}
+                    >Menu</a>
+                    </li>
+
+                    <li>
+                    <a
+                        href={base + "contact"}
+                        class={currentPath === base + "contact" ? "active" : ""}
+                    >Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -30,7 +54,13 @@ const base = import.meta.env.BASE_URL;
             <slot />
             <!-- page-specific content goes here -->
         </main>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </footer>
 
         <!-- <script src="/scripts/script.js" is:inline></script> -->
     </body>
+    
 </html>

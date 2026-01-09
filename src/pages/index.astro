@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL;
                         specialty items directly from Italy to ensure every dish
                         meets our high standards of excellence.
                     </p>
-                    <a href="{base + "contact"} class="btn">Make a Reservation</a>
+                    <a href={base + "contact"} class="btn">Make a Reservation</a>
                 </div>
                 <img
                     src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=600&h=400&fit=crop&auto=format"
@@ -151,6 +151,7 @@ const base = import.meta.env.BASE_URL;
                                 min="1"
                                 max="20"
                                 required
+                                class="text-black"
                             />
                         </div>
                         <div class="form-group">
@@ -170,11 +171,4 @@ const base = import.meta.env.BASE_URL;
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
-        </div>
-    </footer>
 </BaseLayout>
