@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Bella Vista | Home">
@@ -8,11 +9,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="hero-content">
             <h1>Bella Vista Restaurant</h1>
             <p>
-                Experience authentic Italian cuisine crafted with passion and
+                Experience authentic Thai cuisine crafted with passion and
                 the finest ingredients. Join us for an unforgettable dining
                 experience in the heart of the city.
             </p>
-            <a href="/menu" class="btn">View Our Menu</a>
+            <a href={base + "menu"} class="btn">View Our Menu</a>
         </div>
     </section>
 
@@ -24,7 +25,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <h2>Our Story</h2>
                     <p>
                         For over 25 years, Bella Vista has been serving the
-                        community with authentic Italian flavors and warm
+                        community with authentic Thai flavors and warm
                         hospitality. Our family recipes have been passed down
                         through generations, bringing you the true taste of
                         Italy.
@@ -34,7 +35,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         specialty items directly from Italy to ensure every dish
                         meets our high standards of excellence.
                     </p>
-                    <a href="/contact" class="btn">Make a Reservation</a>
+                    <a href="{base + "contact"} class="btn">Make a Reservation</a>
                 </div>
                 <img
                     src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=600&h=400&fit=crop&auto=format"
@@ -121,7 +122,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <form>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required />
+                            <input type="text" id="name" name="name" required class="text-black"/>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -130,15 +131,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                 id="email"
                                 name="email"
                                 required
+                                class="text-black"
                             />
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" />
+                            <input type="tel" id="phone" name="phone" class="text-black"/>
                         </div>
                         <div class="form-group">
                             <label for="date">Preferred Date</label>
-                            <input type="date" id="date" name="date" required />
+                            <input type="date" id="date" name="date" required class="text-black"/>
                         </div>
                         <div class="form-group">
                             <label for="guests">Number of Guests</label>
@@ -156,6 +158,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             <textarea
                                 id="message"
                                 name="message"
+                                class="text-black"
                                 placeholder="Any special dietary requirements or requests..."
                             ></textarea>
                         </div>

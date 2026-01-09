@@ -463,6 +463,11 @@ footer {
     padding: 30px 0;
 }
 
+/* General */
+.text-black {
+    color: black;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
