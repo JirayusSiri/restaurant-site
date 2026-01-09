@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        "prettier-plugin-astro"
+    ],
+    "astroAllowShorthand": false,
+    "astroSkipFrontmatter": false,
+    "singleQuote": true,
+    "semi": true,
+    "tabWidth": 4,
+    "useTabs": false
+}

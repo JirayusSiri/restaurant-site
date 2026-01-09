@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -9,11 +9,11 @@ const base = import.meta.env.BASE_URL;
         <div class="hero-content">
             <h1>Bella Vista Restaurant</h1>
             <p>
-                Experience authentic Thai cuisine crafted with passion and
-                the finest ingredients. Join us for an unforgettable dining
+                Experience authentic Thai cuisine crafted with passion and the
+                finest ingredients. Join us for an unforgettable dining
                 experience in the heart of the city.
             </p>
-            <a href={base + "menu"} class="btn">View Our Menu</a>
+            <a href={base + 'menu'} class="btn">View Our Menu</a>
         </div>
     </section>
 
@@ -27,15 +27,16 @@ const base = import.meta.env.BASE_URL;
                         For over 25 years, Bella Vista has been serving the
                         community with authentic Thai flavors and warm
                         hospitality. Our family recipes have been passed down
-                        through generations, bringing you the true taste of
-                        Thai cuisine.
+                        through generations, bringing you the true taste of Thai
+                        cuisine.
                     </p>
                     <p>
                         We source the finest ingredients locally and import
-                        specialty items directly from Thailand to ensure every dish
-                        meets our high standards of excellence.
+                        specialty items directly from Thailand to ensure every
+                        dish meets our high standards of excellence.
                     </p>
-                    <a href={base + "contact"} class="btn">Make a Reservation</a>
+                    <a href={base + 'contact'} class="btn">Make a Reservation</a
+                    >
                 </div>
                 <img
                     src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=600&h=400&fit=crop&auto=format"
@@ -104,14 +105,14 @@ const base = import.meta.env.BASE_URL;
                 <div class="contact-info">
                     <h3>Restaurant Information</h3>
                     <p>
-                        <strong>Address:</strong><br />123 Main Street<br />Downtown
-                        District<br />Your City, State 12345
+                        <strong>Address:</strong><br />123 Main Street<br
+                        />Downtown District<br />Your City, State 12345
                     </p>
                     <p><strong>Phone:</strong><br />(555) 123-4567</p>
                     <p>
                         <strong>Hours:</strong><br />Monday - Thursday: 11:00 AM
-                        - 10:00 PM<br />Friday - Saturday: 11:00 AM - 11:00
-                        PM<br />Sunday: 12:00 PM - 9:00 PM
+                        - 10:00 PM<br />Friday - Saturday: 11:00 AM - 11:00 PM<br
+                        />Sunday: 12:00 PM - 9:00 PM
                     </p>
                     <p><strong>Email:</strong><br />info@bellavista.com</p>
                 </div>
@@ -122,7 +123,13 @@ const base = import.meta.env.BASE_URL;
                     <form>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required class="text-black"/>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="text-black"
+                            />
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -136,11 +143,22 @@ const base = import.meta.env.BASE_URL;
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" class="text-black"/>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                class="text-black"
+                            />
                         </div>
                         <div class="form-group">
                             <label for="date">Preferred Date</label>
-                            <input type="date" id="date" name="date" required class="text-black"/>
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                required
+                                class="text-black"
+                            />
                         </div>
                         <div class="form-group">
                             <label for="guests">Number of Guests</label>
