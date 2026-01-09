@@ -1,16 +1,177 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Bella Vista | Home">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bella Vista Restaurant</h1>
+            <p>
+                Experience authentic Italian cuisine crafted with passion and
+                the finest ingredients. Join us for an unforgettable dining
+                experience in the heart of the city.
+            </p>
+            <a href="/menu" class="btn">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>
+                        For over 25 years, Bella Vista has been serving the
+                        community with authentic Italian flavors and warm
+                        hospitality. Our family recipes have been passed down
+                        through generations, bringing you the true taste of
+                        Italy.
+                    </p>
+                    <p>
+                        We source the finest ingredients locally and import
+                        specialty items directly from Italy to ensure every dish
+                        meets our high standards of excellence.
+                    </p>
+                    <a href="/contact" class="btn">Make a Reservation</a>
+                </div>
+                <img
+                    src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=600&h=400&fit=crop&auto=format"
+                    alt="about-image"
+                    class="about-image"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview -->
+    <section id="menu" class="menu-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Dishes</h2>
+            <div class="menu-grid">
+                <div class="menu-item-preview">
+                    <img
+                        src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=200&fit=crop&auto=format"
+                        alt="Spaghetti Carbonara"
+                        class="menu-image"
+                    />
+                    <h3>Spaghetti Carbonara</h3>
+                    <div class="price">$18.95</div>
+                    <p>
+                        Classic Roman pasta with eggs, cheese, pancetta, and
+                        black pepper
+                    </p>
+                </div>
+
+                <div class="menu-item-preview">
+                    <img
+                        src="https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?w=400&h=200&fit=crop&auto=format"
+                        alt="Pizza"
+                        class="menu-image"
+                    />
+                    <h3>Margherita Pizza</h3>
+                    <div class="price">$16.50</div>
+                    <p>
+                        Wood-fired pizza with fresh mozzarella, basil, and our
+                        signature tomato sauce
+                    </p>
+                </div>
+
+                <div class="menu-item-preview">
+                    <img
+                        src="https://images.pexels.com/photos/2067418/pexels-photo-2067418.jpeg?w=400&h=200&fit=crop&auto=format"
+                        alt="Risotto"
+                        class="menu-image"
+                    />
+                    <h3>Mushroom Risotto</h3>
+                    <div class="price">$22.95</div>
+                    <p>
+                        Creamy Arborio rice with wild mushrooms, parmesan, and
+                        truffle oil
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white">Visit Us Today</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Restaurant Information</h3>
+                    <p>
+                        <strong>Address:</strong><br />123 Main Street<br />Downtown
+                        District<br />Your City, State 12345
+                    </p>
+                    <p><strong>Phone:</strong><br />(555) 123-4567</p>
+                    <p>
+                        <strong>Hours:</strong><br />Monday - Thursday: 11:00 AM
+                        - 10:00 PM<br />Friday - Saturday: 11:00 AM - 11:00
+                        PM<br />Sunday: 12:00 PM - 9:00 PM
+                    </p>
+                    <p><strong>Email:</strong><br />info@bellavista.com</p>
+                </div>
+                <div class="contact-form">
+                    <h3 style="color: #d4af37; margin-bottom: 20px">
+                        Make a Reservation
+                    </h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" />
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input
+                                type="number"
+                                id="guests"
+                                name="guests"
+                                min="1"
+                                max="20"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Any special dietary requirements or requests..."
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            Send Reservation Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</BaseLayout>
